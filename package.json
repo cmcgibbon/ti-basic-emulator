@@ -1,0 +1,54 @@
+{
+  "name": "ti-basic-emulator",
+  "version": "0.1.0",
+  "description": "A TI-84 Plus style TI-BASIC interpreter and calculator for the web, with a drop-in React component.",
+  "keywords": [
+    "ti-basic",
+    "ti-84",
+    "calculator",
+    "interpreter",
+    "emulator",
+    "react"
+  ],
+  "license": "MIT",
+  "author": "Connor McGibbon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmcgibbon/ti-basic-emulator.git"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "dev": "vite demo",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.5"
+  }
+}
